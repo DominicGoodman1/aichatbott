@@ -39,7 +39,6 @@ while True:
     _, predicted = torch.max(output, dim=1)
     tag = tags[predicted.item()]
 
-    print(tags)
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
     
